@@ -1,11 +1,11 @@
-{% extends 'rango/base.html'%}
-{%load staticfiles%}
-{%block title_block%}
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
     Add a page
-{%endblock%}
+{% endblock %}
 
-{%block body_block%}
-    {%if category%}
+{% block body_block %}
+    {% if category %}
     <h1>Add a Page to {{ category.name }}</h1>
     <div>
         <form id="page_form" method="post" actions="{% url 'rango:add_page' category.slug %}">
